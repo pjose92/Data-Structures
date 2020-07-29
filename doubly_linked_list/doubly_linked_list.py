@@ -27,7 +27,22 @@ class DoublyLinkedList:
     the old head node's previous pointer accordingly.
     """
     def add_to_head(self, value):
-        pass
+        #create instance of ListNode with value
+        new_node = ListNode(value)
+        #check if DLL is empty and if it is empty we will
+        if self.length == 0:
+            #set head and tail to the new node instance
+            self.head = new_node
+            self.tail = new_node
+        #if DLL is NOT empty
+        else:
+            #set the node's next to the current head 
+            new_node.next = self.head
+            self.head.prev = new_node
+            #set head to the new node
+            self.head = new_node
+        #increment the DDL length attribute 
+        self.length += 1
         
     """
     Removes the List's current head node, making the
@@ -35,7 +50,13 @@ class DoublyLinkedList:
     Returns the value of the removed Node.
     """
     def remove_from_head(self):
-        pass
+        #store the value of the head
+        value = self.value.head
+        #decrement the DDL length attibute 
+        self.length -= 1
+        #delete the head
+        # if head.next is not None
+        if self.head.next is not Node:
             
     """
     Wraps the given value in a ListNode and inserts it 
