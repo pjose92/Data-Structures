@@ -9,7 +9,10 @@ class ListNode:
         self.next = next
 
     def delete(self):
-        pass
+        if self.prev:
+            self.prev.next = self.next
+        if self.next:
+            self.next.prev = self.prev
             
 """
 Our doubly-linked list class. It holds references to 
@@ -54,7 +57,7 @@ class DoublyLinkedList:
     Returns the value of the removed Node.
     """
     def remove_from_head(self):
-        # store the valu of the head
+        # store the value of the head
         value = self.head.value
         # Decrement the DLL length attribute
         self.length -= 1

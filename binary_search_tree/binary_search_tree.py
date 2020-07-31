@@ -10,7 +10,6 @@ This part of the project comprises two days:
    on the BSTNode class.
 """
 
-
 class BinarySearchTree:
     def __init__(self, value):
         self.value = value
@@ -50,10 +49,6 @@ class BinarySearchTree:
         while self.right:
             self = self.right
         return self.value
-        # solved recursively
-        # if self.right:
-        #     return self.right.get_max()
-        # return self.value
 
     # Call the function `fn` on the value of each node
     def for_each(self, fn):
@@ -124,32 +119,13 @@ class BinarySearchTree:
 
     # Stretch Goals -------------------------
     # Note: Research may be required
-
     # Print Pre-order recursive DFT
     def pre_order_dft(self):
-        print(self.value)
-        if self.left:
-            self.left.pre_order_dft()
-        if self.right:
-            self.right.pre_order_dft()
+        pass
 
     # Print Post-order recursive DFT
     def post_order_dft(self):
-        if self.left:
-            self.left.post_order_dft()
-        if self.right:
-            self.right.post_order_dft()
-        print(self.value)
-
-    def get_height(self):
-        if self.left and self.right:
-            return max(self.left.get_height(), self.right.get_height()) + 1
-        if self.left:
-            return self.left.get_height() + 1
-        if self.right:
-            return self.right.get_height() + 1
-        else:
-            return 0
+       pass
 
 
 """
@@ -164,7 +140,6 @@ bst.insert(6)
 bst.insert(3)
 bst.insert(4)
 bst.insert(2)
-
 
 bst.bft_print()
 bst.dft_print()
