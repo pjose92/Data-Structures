@@ -121,11 +121,29 @@ class BinarySearchTree:
     # Note: Research may be required
     # Print Pre-order recursive DFT
     def pre_order_dft(self):
-        pass
+        print(self.value)
+        if self.left:
+            self.left.pre_order_dft()
+        if self.right:
+            self.right.pre_order_dft()
 
     # Print Post-order recursive DFT
     def post_order_dft(self):
-       pass
+        if self.left:
+            self.left.post_order_dft()
+        if self.right:
+            self.right.post_order_dft()
+        print(self.value)
+
+    def get_height(self):
+        if self.left and self.right:
+            return max(self.left.get_height(), self.right.get_height()) + 1
+        if self.left:
+            return self.left.get_height() + 1
+        if self.right:
+            return self.right.get_height() + 1
+        else:
+            return 0
 
 
 """
