@@ -121,31 +121,6 @@ class BinarySearchTree:
                 stack.append(current.right)
             if current.left:
                 stack.append(current.left)
-        # iterative InOrder traversal
-        # stack = []
-        # while True:
-        #     if self:
-        #         stack.append(self)
-        #         self = self.left
-        #     else:
-        #         if not len(stack):
-        #             break
-        #         current = stack.pop()
-        #         print(current.value)
-        #         self = current.right
-
-        # iterative PostOrder traversal
-        # stack = []
-        # result = []
-        # stack.append(self)
-        # while len(stack):
-        #     current = stack.pop()
-        #     result.insert(0, current.value)
-        #     if current.left:
-        #         stack.append(current.left)
-        #     if current.right:
-        #         stack.append(current.right)
-        # [print(v) for v in result]
 
     # Stretch Goals -------------------------
     # Note: Research may be required
